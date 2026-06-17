@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahid Sattar | Software Developer Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        lavish: {
+                            dark: '#0B0F19',
+                            card: '#161D30',
+                            accent: '#10B981', /* Emerald */
+                            accentHover: '#059669',
+                            muted: '#94A3B8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom subtle animations */
+        .gradient-text {
+            background: linear-gradient(135deg, #10B981 0%, #3B82F6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-nav {
+            background: rgba(11, 15, 25, 0.8);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-lavish-dark text-white font-sans antialiased selection:bg-lavish-accent selection:text-lavish-dark">
+ 
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full z-50 glass-nav border-b border-gray-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#home" class="text-xl font-bold tracking-tight">
+                SS<span class="text-lavish-accent">.</span>
+            </a>
+           
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                <a href="#home" class="hover:text-lavish-accent transition-colors">Home</a>
+                <a href="#about" class="hover:text-lavish-accent transition-colors">About</a>
+                <a href="#experience" class="hover:text-lavish-accent transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-lavish-accent transition-colors">Projects</a>
+                <a href="#contact" class="bg-lavish-accent text-lavish-dark px-5 py-2.5 rounded-full font-semibold hover:bg-lavish-accentHover transition-all shadow-lg shadow-emerald-500/20">Hire Me</a>
+            </div>
+ 
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-gray-300 hover:text-white focus:outline-noneIcon">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+       
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-lavish-card border-b border-gray-800 px-6 py-4 space-y-3">
+            <a href="#home" class="block text-gray-300 hover:text-lavish-accent py-2">Home</a>
+            <a href="#about" class="block text-gray-300 hover:text-lavish-accent py-2">About</a>
+            <a href="#experience" class="block text-gray-300 hover:text-lavish-accent py-2">Experience</a>
+            <a href="#projects" class="block text-gray-300 hover:text-lavish-accent py-2">Projects</a>
+            <a href="#contact" class="block bg-lavish-accent text-lavish-dark text-center py-2.5 rounded-full font-semibold">Hire Me</a>
+        </div>
+    </nav>
+ 
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-24 px-6 relative overflow-hidden">
+        <!-- Background decorative ambient lights -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+ 
+        <div class="max-w-4xl text-center z-10">
+            <span class="text-lavish-accent uppercase tracking-widest text-xs font-bold bg-emerald-500/10 px-4 py-1.5 rounded-full inline-block mb-6">Available for New Opportunities</span>
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+    		Hi, I'm <span class="gradient-text">Shahid Sattar</span> <br>
+		    Building Scalable Web, Mobile & Enterprise Applications
+		</h1>
+
+			<p class="text-lg text-lavish-muted max-w-2xl mx-auto mb-10 leading-relaxed">
+		    A Software Developer specializing in enterprise application development, SQL database management, business process automation, and building secure, scalable, data-driven software solutions.
+		</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#projects" class="w-full sm:w-auto bg-lavish-accent text-lavish-dark font-semibold px-8 py-4 rounded-xl hover:bg-lavish-accentHover transition-all shadow-xl shadow-emerald-500/10 text-center">
+                    View My Work
+                </a>
+                <a href="#contact" class="w-full sm:w-auto border border-gray-700 bg-gray-900/40 hover:bg-gray-800/60 font-semibold px-8 py-4 rounded-xl transition-all text-center">
+                    Let's Connect
+                </a>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- About & Skills Section -->
+    <section id="about" class="py-24 max-w-7xl mx-auto px-6 border-t border-gray-900">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <div class="lg:col-span-5">
+    		<span class="text-lavish-accent font-semibold tracking-wider uppercase text-sm">Professional Summary</span>
+		    <h2 class="text-3xl font-bold mt-2 mb-6">Building scalable backend systems and efficient database solutions.</h2>
+    
+    		<p class="text-lavish-muted leading-relaxed mb-6">
+    			Software Developer specializing in database design, SQL optimization, application development, and business process automation. Experienced in building enterprise solutions, developing scalable backend systems, managing complex databases, and delivering data-driven applications that enhance operational efficiency and decision-making.
+			</p>
+
+	    <div class="flex items-center space-x-4 text-sm text-gray-300">
+        	<div><i class="fa-solid fa-envelope text-lavish-accent mr-2"></i>Shahidsttr01@gmail.com</div>
+	        <div>|</div>
+        	<div><i class="fa-solid fa-phone text-lavish-accent mr-2"></i>0333-1794480</div>
+	    </div>	
+		</div>	
+           
+            <div class="lg:col-span-7 bg-lavish-card border border-gray-800 rounded-2xl p-8 shadow-xl">
+                <h3 class="text-xl font-bold mb-6 text-emerald-400"><i class="fa-solid fa-code mr-2"></i> Core Technologies</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                    <!-- Tech Item -->
+                    <div class="bg-lavish-dark/50 border border-gray-800 p-4 rounded-xl flex items-center space-x-3">
+                        <i class="fa-brands fa-html5 text-orange-500 text-xl"></i>
+                        <span class="font-medium text-sm">HTML5</span>
+                    </div>
+                    <div class="bg-lavish-dark/50 border border-gray-800 p-4 rounded-xl flex items-center space-x-3">
+                        <i class="fa-brands fa-css3-alt text-blue-500 text-xl"></i>
+                        <span class="font-medium text-sm">CSS3</span>
+                    </div>
+                    <div class="bg-lavish-dark/50 border border-gray-800 p-4 rounded-xl flex items-center space-x-3">
+                        <i class="fa-brands fa-js text-yellow-500 text-xl"></i>
+                        <span class="font-medium text-sm">JavaScript</span>
+                    </div>
+                    <div class="bg-lavish-dark/50 border border-gray-800 p-4 rounded-xl flex items-center space-x-3">
+                        <i class="fa-brands fa-bootstrap text-purple-500 text-xl"></i>
+                        <span class="font-medium text-sm">Bootstrap</span>
+                    </div>
+                    <div class="bg-lavish-dark/50 border border-gray-800 p-4 rounded-xl flex items-center space-x-3">
+                        <i class="fa-solid fa-cubes text-blue-400 text-xl"></i>
+                        <span class="font-medium text-sm">ASP.NET</span></div>
+			<div class="bg-lavish-dark/50 border border-gray-800 p-4 rounded-xl flex items-center space-x-3">
+		    <i class="fa-solid fa-code text-blue-400 text-xl"></i>
+		    <span class="font-medium text-sm">Python</span>
+			</div>
+                    <div class="bg-lavish-dark/50 border border-gray-800 p-4 rounded-xl flex items-center space-x-3"> 
+			<i class="fa-solid fa-code text-teal-500 text-xl"></i> 
+			<span class="font-medium text-sm">Java</span> 
+			</div>
+                    <div class="bg-lavish-dark/50 border border-gray-800 p-4 rounded-xl flex items-center space-x-3">
+                        <i class="fa-solid fa-database text-teal-500 text-xl"></i>
+                        <span class="font-medium text-sm">SQL Server</span>
+                    </div>
+		    <div class="bg-lavish-dark/50 border border-gray-800 p-4 rounded-xl flex items-center space-x-3">
+ 			   <i class="fa-solid fa-tablet-screen-button text-teal-500 text-xl"></i>
+			    <span class="font-medium text-sm">Mobile Application Development</span>
+		</div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 bg-gradient-to-b from-lavish-dark to-gray-950 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-lavish-accent font-semibold tracking-wider uppercase text-sm">The Journey</span>
+                <h2 class="text-3xl sm:text-4xl font-bold mt-2">Professional Experience</h2>
+            </div>
+ 
+            <!-- Timeline -->
+            <div class="relative border-l-2 border-gray-800 ml-4 md:ml-6 space-y-12">
+
+    <!-- Experience Item 1 -->
+    <div class="relative pl-8 md:pl-10">
+        
+        <!-- Timeline node -->
+        <div class="absolute -left-[13px] top-1.5 bg-lavish-accent w-6 h-6 rounded-full border-4 border-lavish-dark flex items-center justify-center shadow-lg shadow-emerald-500/50"></div>
+
+        <div class="bg-lavish-card border border-gray-800 p-6 sm:p-8 rounded-2xl shadow-xl transition-all hover:border-gray-700">
+            
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
+                <div>
+                    <h3 class="text-xl font-bold text-white">Software Developer</h3>
+                    <p class="text-lavish-accent font-medium mt-0.5">Falcon Holdings Management LLC</p>
+                </div>
+
+                <span class="text-xs font-semibold px-3 py-1 bg-gray-800 text-gray-300 rounded-full self-start sm:self-center">
+                    Sep 2024 — Present
+                </span>
+            </div>
+
+            <p class="text-lavish-muted text-sm leading-relaxed mb-4">
+                Developed and maintained enterprise-level backend applications, database systems, and business automation solutions. Focused on building secure, scalable, and high-performance software that streamlines business operations and improves data management.
+            </p>
+
+            <ul class="space-y-2 text-sm text-gray-300">
+                <li class="flex items-start">
+                    <i class="fa-solid fa-circle-check text-lavish-accent mt-1 mr-3 text-xs"></i>
+                    Developed and maintained backend services, APIs, and business logic for enterprise applications.
+                </li>
+
+                <li class="flex items-start">
+                    <i class="fa-solid fa-circle-check text-lavish-accent mt-1 mr-3 text-xs"></i>
+                    Designed, optimized, and managed SQL databases, including queries, stored procedures, and data validation processes.
+                </li>
+
+                <li class="flex items-start">
+                    <i class="fa-solid fa-circle-check text-lavish-accent mt-1 mr-3 text-xs"></i>
+                    Implemented secure and efficient data management solutions to enhance application performance and reliability.
+                </li>
+
+                <li class="flex items-start">
+                    <i class="fa-solid fa-circle-check text-lavish-accent mt-1 mr-3 text-xs"></i>
+                    Collaborated with cross-functional teams to deliver scalable software solutions and automate business workflows.
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!-- Experience Item 2 -->
+<div class="relative pl-8 md:pl-10">
+
+    <!-- Timeline node -->
+    <div class="absolute -left-[13px] top-1.5 bg-lavish-accent w-6 h-6 rounded-full border-4 border-lavish-dark flex items-center justify-center shadow-lg shadow-emerald-500/50"></div>
+
+    <div class="bg-lavish-card border border-gray-800 p-6 sm:p-8 rounded-2xl shadow-xl transition-all hover:border-gray-700">
+
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
+            <div>
+                <h3 class="text-xl font-bold text-white">Android Developer Intern</h3>
+                <p class="text-lavish-accent font-medium mt-0.5">Vision Tech</p>
+            </div>
+
+            <span class="text-xs font-semibold px-3 py-1 bg-gray-800 text-gray-300 rounded-full self-start sm:self-center">
+                Feb 2024 — Apr 2024
+            </span>
+        </div>
+
+        <p class="text-lavish-muted text-sm leading-relaxed mb-4">
+            Assisted the development team in building an E-Commerce mobile application by contributing to Android application development, implementing features, and improving overall application functionality.
+        </p>
+
+        <ul class="space-y-2 text-sm text-gray-300">
+
+            <li class="flex items-start">
+                <i class="fa-solid fa-circle-check text-lavish-accent mt-1 mr-3 text-xs"></i>
+                Assisted in developing an E-Commerce Android application using modern mobile development practices.
+            </li>
+
+            <li class="flex items-start">
+                <i class="fa-solid fa-circle-check text-lavish-accent mt-1 mr-3 text-xs"></i>
+                Worked with functional components and application architecture to support project development.
+            </li>
+
+            <li class="flex items-start">
+                <i class="fa-solid fa-circle-check text-lavish-accent mt-1 mr-3 text-xs"></i>
+                Applied knowledge of PHP scripting, ADB, JSON handling, and Android application signing processes.
+            </li>
+
+            <li class="flex items-start">
+                <i class="fa-solid fa-circle-check text-lavish-accent mt-1 mr-3 text-xs"></i>
+                Implemented lifecycle methods and state management techniques while collaborating with team members.
+            </li>
+
+        </ul>
+
+    </div>
+</div>
+
+<!-- Experience Item 3 -->
+<div class="relative pl-8 md:pl-10">
+
+    <!-- Timeline node -->
+    <div class="absolute -left-[13px] top-1.5 bg-lavish-accent w-6 h-6 rounded-full border-4 border-lavish-dark flex items-center justify-center shadow-lg shadow-emerald-500/50"></div>
+
+    <div class="bg-lavish-card border border-gray-800 p-6 sm:p-8 rounded-2xl shadow-xl transition-all hover:border-gray-700">
+
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
+            <div>
+                <h3 class="text-xl font-bold text-white">Data Scientist Intern</h3>
+                <p class="text-lavish-accent font-medium mt-0.5">Bytewise</p>
+            </div>
+
+            <span class="text-xs font-semibold px-3 py-1 bg-gray-800 text-gray-300 rounded-full self-start sm:self-center">
+                Sep 2022 — Dec 2022
+            </span>
+        </div>
+
+        <p class="text-lavish-muted text-sm leading-relaxed mb-4">
+            Gained practical experience in Python development and data-driven application solutions by contributing to software enhancements, implementing components, and collaborating with senior developers.
+        </p>
+
+        <ul class="space-y-2 text-sm text-gray-300">
+
+            <li class="flex items-start">
+                <i class="fa-solid fa-circle-check text-lavish-accent mt-1 mr-3 text-xs"></i>
+                Developed and implemented Python components to enhance application functionality and performance.
+            </li>
+
+            <li class="flex items-start">
+                <i class="fa-solid fa-circle-check text-lavish-accent mt-1 mr-3 text-xs"></i>
+                Completed a 100-day Python development challenge to strengthen programming skills and problem-solving abilities.
+            </li>
+
+            <li class="flex items-start">
+                <i class="fa-solid fa-circle-check text-lavish-accent mt-1 mr-3 text-xs"></i>
+                Collaborated with senior developers to design, develop, and integrate new features and software modules.
+            </li>
+
+        </ul>
+
+    </div>
+</div>
+
+</div>
+        </div>
+    </section>
+ 
+    <!-- Projects Section -->
+<section id="projects" class="py-24 max-w-7xl mx-auto px-6">
+
+    <div class="text-center mb-16">
+        <span class="text-lavish-accent font-semibold tracking-wider uppercase text-sm">Featured Work</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mt-2">Enterprise Software Systems</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- Project 1 -->
+        <div class="bg-lavish-card border border-gray-800 rounded-2xl overflow-hidden shadow-xl flex flex-col justify-between group hover:border-emerald-500/30 transition-all duration-300">
+            <div class="p-8">
+
+                <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 text-xl mb-6 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-users-gear"></i>
+                </div>
+
+                <h3 class="text-2xl font-bold mb-3">Enterprise HR Management System (HRMS)</h3>
+
+                <p class="text-lavish-muted text-sm leading-relaxed mb-6">
+                    Developed a centralized HR management platform to automate employee records, HR operations, and administrative workflows. The system manages employee profiles, qualifications, bank details, leave applications, medical claims, payroll processes, and reporting through an optimized database architecture.
+                </p>
+
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs px-3 py-1 bg-lavish-dark border border-gray-800 rounded-md text-gray-400">ASP.NET</span>
+                    <span class="text-xs px-3 py-1 bg-lavish-dark border border-gray-800 rounded-md text-gray-400">SQL Server</span>
+                    <span class="text-xs px-3 py-1 bg-lavish-dark border border-gray-800 rounded-md text-gray-400">C#</span>
+                    <span class="text-xs px-3 py-1 bg-lavish-dark border border-gray-800 rounded-md text-gray-400">JavaScript</span>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Project 2 -->
+        <div class="bg-lavish-card border border-gray-800 rounded-2xl overflow-hidden shadow-xl flex flex-col justify-between group hover:border-emerald-500/30 transition-all duration-300">
+            <div class="p-8">
+
+                <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-lavish-accent text-xl mb-6 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <h3 class="text-2xl font-bold mb-3">Automated Financial Reporting & Analysis System</h3>
+
+                <p class="text-lavish-muted text-sm leading-relaxed mb-6">
+                    Built an automated financial reporting solution for Actual vs Budget analysis and Current Year vs Previous Year performance comparison. Designed database structures, optimized SQL queries, implemented financial calculations, and generated dynamic reports for sales, expenses, profitability, and variance analysis.
+                </p>
+
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs px-3 py-1 bg-lavish-dark border border-gray-800 rounded-md text-gray-400">ASP.NET</span>
+                    <span class="text-xs px-3 py-1 bg-lavish-dark border border-gray-800 rounded-md text-gray-400">SQL Server</span>
+                    <span class="text-xs px-3 py-1 bg-lavish-dark border border-gray-800 rounded-md text-gray-400">Stored Procedures</span>
+                    <span class="text-xs px-3 py-1 bg-lavish-dark border border-gray-800 rounded-md text-gray-400">Python</span>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Project 3 -->
+        <div class="bg-lavish-card border border-gray-800 rounded-2xl overflow-hidden shadow-xl flex flex-col justify-between group hover:border-emerald-500/30 transition-all duration-300">
+            <div class="p-8">
+
+                <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex more items-center justify-center text-purple-400 text-xl mb-6 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-gears"></i>
+                </div>
+
+                <h3 class="text-2xl font-bold mb-3">Business Process Automation System</h3>
+
+                <p class="text-lavish-muted text-sm leading-relaxed mb-6">
+                    Developed automation solutions using Python libraries to streamline data processing, reporting, and database management tasks. Reduced manual efforts, improved operational efficiency, and enhanced accuracy and timeliness of business reports.
+                </p>
+
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs px-3 py-1 bg-lavish-dark border border-gray-800 rounded-md text-gray-400">Python</span>
+                    <span class="text-xs px-3 py-1 bg-lavish-dark border border-gray-800 rounded-md text-gray-400">Pandas</span>
+                    <span class="text-xs px-3 py-1 bg-lavish-dark border border-gray-800 rounded-md text-gray-400">Tkinter</span>
+                    <span class="text-xs px-3 py-1 bg-lavish-dark border border-gray-800 rounded-md text-gray-400">PyPDF2</span>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Project 4 -->
+        <div class="bg-lavish-card border border-gray-800 rounded-2xl overflow-hidden shadow-xl flex flex-col justify-between group hover:border-emerald-500/30 transition-all duration-300">
+            <div class="p-8">
+
+                <div class="w-12 h-12 bg-red-500/10 rounded-xl flex items-center justify-center text-red-400 text-xl mb-6 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+
+                <h3 class="text-2xl font-bold mb-3">IoT-Based Heart Valve Blockage Prediction System</h3>
+
+                <p class="text-lavish-muted text-sm leading-relaxed mb-6">
+                    Developed an IoT-based healthcare solution using a Flutter mobile application integrated with a deep learning model. The system predicts heart valve blockage using real-time heart sound data and provides recommendations for nearby heart specialists and hospitals. The project secured top position at NUML Open House 2023 and ranked among the top 15 projects at AIEF National AI Championship.
+                </p>
+
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs px-3 py-1 bg-lavish-dark border border-gray-800 rounded-md text-gray-400">Flutter</span>
+                    <span class="text-xs px-3 py-1 bg-lavish-dark border border-gray-800 rounded-md text-gray-400">Python</span>
+                    <span class="text-xs px-3 py-1 bg-lavish-dark border border-gray-800 rounded-md text-gray-400">Deep Learning</span>
+                    <span class="text-xs px-3 py-1 bg-lavish-dark border border-gray-800 rounded-md text-gray-400">IoT</span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+ 
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-gradient-to-t from-lavish-dark to-gray-950 px-6 border-t border-gray-900">
+        <div class="max-w-5xl mx-auto bg-lavish-card border border-gray-800 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+            <div class="absolute -right-24 -bottom-24 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl"></div>
+           
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
+                <div class="lg:col-span-5 flex flex-col justify-between">
+                    <div>
+                        <span class="text-lavish-accent font-semibold tracking-wider uppercase text-sm">Contact</span>
+                        <h2 class="text-3xl font-bold mt-2 mb-4">Let's build something exceptional.</h2>
+                        <p class="text-lavish-muted text-sm leading-relaxed mb-8">
+                            Ready to integrate scalable systems or striking layouts into your business pipeline? Get in touch today.
+                        </p>
+                    </div>
+                   
+                    <div class="space-y-4">
+                        <a href="mailto:Shahidsttr01@gmail.com" class="flex items-center space-x-4 p-4 bg-lavish-dark/60 border border-gray-800 rounded-xl hover:border-lavish-accent transition-all group">
+                            <i class="fa-solid fa-envelope text-lavish-accent text-lg group-hover:scale-110 transition-transform"></i>
+                            <div>
+                                <p class="text-xs text-lavish-muted font-medium">Email Me Directly</p>
+                                <p class="text-sm font-semibold text-white">Shahidsttr01@gmail.com</p>
+                            </div>
+                        </a>
+                        <a href="tel:03331794480" class="flex items-center space-x-4 p-4 bg-lavish-dark/60 border border-gray-800 rounded-xl hover:border-lavish-accent transition-all group">
+                            <i class="fa-solid fa-phone text-lavish-accent text-lg group-hover:scale-110 transition-transform"></i>
+                            <div>
+                                <p class="text-xs text-lavish-muted font-medium">Call / WhatsApp</p>
+                                <p class="text-sm font-semibold text-white">0333-1794480</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+               
+                <!-- Simple contact form handler -->
+                <div class="lg:col-span-7">
+                    <form class="space-y-4" action="mailto:Shahidsttr01@gmail.com" method="post" enctype="text/plain">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Your Name</label>
+                                <input type="text" required class="w-full bg-lavish-dark border border-gray-800 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-lavish-accent transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Email Address</label>
+                                <input type="email" required class="w-full bg-lavish-dark border border-gray-800 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-lavish-accent transition-colors">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Subject</label>
+                            <input type="text" required class="w-full bg-lavish-dark border border-gray-800 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-lavish-accent transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Message</label>
+                            <textarea rows="4" required class="w-full bg-lavish-dark border border-gray-800 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-lavish-accent transition-colors resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-lavish-accent text-lavish-dark font-bold py-4 rounded-xl hover:bg-lavish-accentHover transition-colors shadow-lg shadow-emerald-500/10">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Footer -->
+    <footer class="py-8 text-center text-xs text-lavish-muted border-t border-gray-900">
+        <p>&copy; 2026 Shahid Sattar. Manufactured with precision.</p>
+    </footer>
+ 
+    <!-- Simple Menu Toggle Script -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+ 
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+ 
+        // Close menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
